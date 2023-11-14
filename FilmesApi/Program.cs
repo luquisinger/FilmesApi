@@ -6,7 +6,7 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 var ConnectionString = builder.Configuration.GetConnectionString("FilmeConnection");
 
-builder.Services.AddDbContext<FilmeContex>(opts =>
+builder.Services.AddDbContext<FilmeContext>(opts =>
 opts.UseMySql(ConnectionString, ServerVersion.AutoDetect(ConnectionString)));
 
 //utilizar o AutoMapper na aplicacao toda
